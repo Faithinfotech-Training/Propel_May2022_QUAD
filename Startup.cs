@@ -29,7 +29,7 @@ namespace QuadClinicWebApplication2022
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddControllers();
+        
             //Add dependency Injection for EmployeeDbContext
             services.AddDbContext<QuadClinicContext>(
                 options => options.UseSqlServer(Configuration.GetConnectionString("QuadClinicConnection")));
@@ -52,6 +52,11 @@ namespace QuadClinicWebApplication2022
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            //Add Cors
+            app.UseCors(options =>
+            options.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
