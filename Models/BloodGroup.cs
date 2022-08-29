@@ -11,12 +11,12 @@ namespace QuadClinicWebApplication2022.Models
     {
         public BloodGroup()
         {
-            Patient = new HashSet<Patient>();
+            //Patient = new HashSet<Patient>();
         }
 
         public int BloodGroupId { get; set; }
         public string BloodGroup1 { get; set; }
 
-        public virtual ICollection<Patient> Patient { get; set; }
+        //public virtual ICollection<Patient> Patient { get; set; }
     }
 }

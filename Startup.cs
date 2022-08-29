@@ -13,6 +13,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using QuadClinicWebApplication2022.Repository;
 
 namespace QuadClinicWebApplication2022
 {
@@ -44,7 +45,7 @@ namespace QuadClinicWebApplication2022
                     options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
                 });
             //add service for repository layer
-            //services.AddScoped<IEmployeeRepository, EmployeeRepository>();
+            services.AddScoped<IReceptionistRepository, ReceptionistRepository>();
             //Enable Cors
             services.AddCors();
         }

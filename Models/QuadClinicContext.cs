@@ -60,10 +60,10 @@ namespace QuadClinicWebApplication2022.Models
                     .HasForeignKey(d => d.DoctorId)
                     .HasConstraintName("FK__Appointme__Docto__4D94879B");
 
-                entity.HasOne(d => d.Patient)
-                    .WithMany(p => p.Appointment)
-                    .HasForeignKey(d => d.PatientId)
-                    .HasConstraintName("FK__Appointme__Patie__4E88ABD4");
+                //entity.HasOne(d => d.Patient)
+                //    .WithMany(p => p.Appointment)
+                //    .HasForeignKey(d => d.PatientId)
+                //    .HasConstraintName("FK__Appointme__Patie__4E88ABD4");
 
                 entity.HasOne(d => d.Specialization)
                     .WithMany(p => p.Appointment)
@@ -96,10 +96,10 @@ namespace QuadClinicWebApplication2022.Models
                     .HasForeignKey(d => d.DoctorId)
                     .HasConstraintName("FK__Appointme__Docto__6FE99F9F");
 
-                entity.HasOne(d => d.Patient)
-                    .WithMany(p => p.AppointmentBill)
-                    .HasForeignKey(d => d.PatientId)
-                    .HasConstraintName("FK__Appointme__Patie__6EF57B66");
+                //entity.HasOne(d => d.Patient)
+                //    .WithMany(p => p.AppointmentBill)
+                //    .HasForeignKey(d => d.PatientId)
+                //    .HasConstraintName("FK__Appointme__Patie__6EF57B66");
             });
 
             modelBuilder.Entity<BloodGroup>(entity =>
@@ -187,10 +187,10 @@ namespace QuadClinicWebApplication2022.Models
                     .HasForeignKey(d => d.LabTestPrescId)
                     .HasConstraintName("FK__LabTestBi__LabTe__797309D9");
 
-                entity.HasOne(d => d.Patient)
-                    .WithMany(p => p.LabTestBill)
-                    .HasForeignKey(d => d.PatientId)
-                    .HasConstraintName("FK__LabTestBi__Patie__75A278F5");
+                //entity.HasOne(d => d.Patient)
+                //    .WithMany(p => p.LabTestBill)
+                //    .HasForeignKey(d => d.PatientId)
+                //    .HasConstraintName("FK__LabTestBi__Patie__75A278F5");
             });
 
             modelBuilder.Entity<LabTestPrescription>(entity =>
@@ -213,10 +213,10 @@ namespace QuadClinicWebApplication2022.Models
                     .HasForeignKey(d => d.LabTestId)
                     .HasConstraintName("FK__LabTestPr__LabTe__5BE2A6F2");
 
-                entity.HasOne(d => d.Patient)
-                    .WithMany(p => p.LabTestPrescription)
-                    .HasForeignKey(d => d.PatientId)
-                    .HasConstraintName("FK__LabTestPr__Patie__5CD6CB2B");
+                //entity.HasOne(d => d.Patient)
+                //    .WithMany(p => p.LabTestPrescription)
+                //    .HasForeignKey(d => d.PatientId)
+                //    .HasConstraintName("FK__LabTestPr__Patie__5CD6CB2B");
             });
 
             modelBuilder.Entity<LabTestReport>(entity =>
@@ -252,10 +252,10 @@ namespace QuadClinicWebApplication2022.Models
                     .HasForeignKey(d => d.LabTestPrescId)
                     .HasConstraintName("FK__LabTestRe__LabTe__619B8048");
 
-                entity.HasOne(d => d.Patient)
-                    .WithMany(p => p.LabTestReport)
-                    .HasForeignKey(d => d.PatientId)
-                    .HasConstraintName("FK__LabTestRe__Patie__628FA481");
+                //entity.HasOne(d => d.Patient)
+                //    .WithMany(p => p.LabTestReport)
+                //    .HasForeignKey(d => d.PatientId)
+                //    .HasConstraintName("FK__LabTestRe__Patie__628FA481");
             });
 
             modelBuilder.Entity<Medicine>(entity =>
@@ -302,10 +302,10 @@ namespace QuadClinicWebApplication2022.Models
                     .HasForeignKey(d => d.MedicinePrescId)
                     .HasConstraintName("FK__MedicineB__Medic__00200768");
 
-                entity.HasOne(d => d.Patient)
-                    .WithMany(p => p.MedicineBill)
-                    .HasForeignKey(d => d.PatientId)
-                    .HasConstraintName("FK__MedicineB__Patie__7E37BEF6");
+                //entity.HasOne(d => d.Patient)
+                //    .WithMany(p => p.MedicineBill)
+                //    .HasForeignKey(d => d.PatientId)
+                //    .HasConstraintName("FK__MedicineB__Patie__7E37BEF6");
             });
 
             modelBuilder.Entity<MedicinePrescription>(entity =>
@@ -336,10 +336,10 @@ namespace QuadClinicWebApplication2022.Models
                     .HasForeignKey(d => d.MedicineId)
                     .HasConstraintName("FK__MedicineP__Medic__5629CD9C");
 
-                entity.HasOne(d => d.Patient)
-                    .WithMany(p => p.MedicinePrescription)
-                    .HasForeignKey(d => d.PatientId)
-                    .HasConstraintName("FK__MedicineP__Patie__571DF1D5");
+                //entity.HasOne(d => d.Patient)
+                //    .WithMany(p => p.MedicinePrescription)
+                //    .HasForeignKey(d => d.PatientId)
+                //    .HasConstraintName("FK__MedicineP__Patie__571DF1D5");
             });
 
             modelBuilder.Entity<Patient>(entity =>
@@ -373,10 +373,10 @@ namespace QuadClinicWebApplication2022.Models
                     .HasMaxLength(50)
                     .IsUnicode(false);
 
-                entity.HasOne(d => d.BloodGroup)
-                    .WithMany(p => p.Patient)
-                    .HasForeignKey(d => d.BloodGroupId)
-                    .HasConstraintName("FK__Patient__BloodGr__48CFD27E");
+                //entity.HasOne(d => d.BloodGroup)
+                //    .WithMany(p => p.Patient)
+                //    .HasForeignKey(d => d.BloodGroupId)
+                //    .HasConstraintName("FK__Patient__BloodGr__48CFD27E");
             });
 
             modelBuilder.Entity<Role>(entity =>
@@ -458,10 +458,10 @@ namespace QuadClinicWebApplication2022.Models
                     .HasForeignKey(d => d.MedicinePrescId)
                     .HasConstraintName("FK__Treatment__Medic__6A30C649");
 
-                entity.HasOne(d => d.Patient)
-                    .WithMany(p => p.TreatmentHistory)
-                    .HasForeignKey(d => d.PatientId)
-                    .HasConstraintName("FK__Treatment__Patie__6754599E");
+                //entity.HasOne(d => d.Patient)
+                //    .WithMany(p => p.TreatmentHistory)
+                //    .HasForeignKey(d => d.PatientId)
+                //    .HasConstraintName("FK__Treatment__Patie__6754599E");
             });
 
             modelBuilder.Entity<User>(entity =>
